@@ -251,7 +251,7 @@ export default function ClubPage() {
         </div>
       </div>
       <div className="mt-44 flex w-full flex-col gap-12 bg-[#070314] px-8 py-3">
-        <div className="grid grid-cols-[75%_25%] gap-6">
+        <div className="mt-8 grid grid-cols-1 gap-6 md:mt-4 md:grid-cols-[75%_25%]">
           <Carousel
             variant="match"
             title="Preporučeni događaji"
@@ -260,7 +260,7 @@ export default function ClubPage() {
           />
           <JoinBanner />
         </div>
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           <Results clubMatches={clubMatches} currentClubId={club.id} />
           <Ranking clubId={club.id} />
         </div>
