@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <div className="flex w-full items-center justify-center gap-4 p-4">
-      <div className="flex items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4">
         <Popover>
           <PopoverTrigger asChild>
             <Button

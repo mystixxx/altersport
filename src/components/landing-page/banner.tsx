@@ -1,6 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 interface BannerProps {
   title?: string;
@@ -8,6 +9,7 @@ interface BannerProps {
   buttonText?: string;
   imageSrc?: string;
   imageAlt?: string;
+  imageClassName?: string;
 }
 
 export default function Banner({
@@ -16,6 +18,7 @@ export default function Banner({
   buttonText = "Ispuni Kviz",
   imageSrc = "/banner_sport.png",
   imageAlt = "Banner Image",
+  imageClassName = "",
 }: BannerProps = {}) {
   return (
     <div className="relative flex flex-col gap-20 overflow-hidden rounded-2xl bg-[url('/banner_gradinet.svg')] bg-cover bg-center px-6 py-8">
@@ -35,7 +38,7 @@ export default function Banner({
         width={420}
         height={360}
         priority
-        className="absolute top-3 right-20"
+        className={cn("absolute top-3 right-20", imageClassName)}
       />
     </div>
   );

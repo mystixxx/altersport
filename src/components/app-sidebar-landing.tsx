@@ -219,7 +219,7 @@ export function AppSidebarLanding({
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <Link href="/leagues">
+        <Link href="/leagues" className="invisible md:visible">
           <div className="flex items-center justify-between gap-2 px-2 pb-5">
             <div className="flex items-center gap-2">
               <Avatar>
