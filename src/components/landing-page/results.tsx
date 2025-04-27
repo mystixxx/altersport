@@ -305,6 +305,7 @@ export default function Results({
                     matchDate={match.matchDate}
                     matchTime={match.matchTime}
                     locationName={locationName}
+                    matchId={match.id}
                   />
                 );
               }
@@ -321,6 +322,7 @@ export default function Results({
                   matchDate={match.matchDate}
                   matchTime={match.matchTime}
                   locationName={locationName}
+                  matchId={match.id}
                 />
               );
             })}

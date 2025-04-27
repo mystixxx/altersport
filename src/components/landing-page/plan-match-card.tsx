@@ -1,5 +1,6 @@
 import { Star } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface TeamProps {
   name: string;
@@ -39,6 +40,7 @@ export interface PlanMatchCardProps {
   matchDate?: string;
   matchTime?: string;
   locationName?: string;
+  matchId?: string;
 }
 
 export default function PlanMatchCard({
@@ -50,9 +52,10 @@ export default function PlanMatchCard({
   matchDate,
   matchTime,
   locationName,
+  matchId,
 }: PlanMatchCardProps) {
-  return (
-    <div className="flex items-center justify-between rounded-2xl bg-[#0E0C28] p-4">
+  const cardContent = (
+    <>
       <div className="flex flex-col gap-1">
         <p className="text-base font-bold text-white">
           {locationName || "Venue TBD"} · {matchTime || "TBD"}
@@ -79,6 +82,18 @@ export default function PlanMatchCard({
           className="cursor-pointer transition-colors duration-300 ease-in-out"
         />
       </div>
+    </>
+  );
+
+  return matchId ? (
+    <Link href={`/match/${matchId}`} className="block w-full">
+      <div className="flex cursor-pointer items-center justify-between rounded-2xl bg-[#0E0C28] p-4 transition-colors hover:bg-[#12103A]">
+        {cardContent}
+      </div>
+    </Link>
+  ) : (
+    <div className="flex items-center justify-between rounded-2xl bg-[#0E0C28] p-4">
+      {cardContent}
     </div>
   );
 }
