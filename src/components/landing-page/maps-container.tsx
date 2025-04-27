@@ -481,8 +481,8 @@ export default function MapsContainer() {
       <h2 className="text-2xl font-semibold text-white">Pretraži na karti</h2>
 
       <div className="flex flex-col gap-5 rounded-md bg-[#0E0C28] p-5">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
+        <div className="flex flex-col justify-between gap-2 md:flex-row md:items-center">
+          <div className="flex flex-wrap items-center justify-between gap-2">
             <FilterDropdown
               label="Sport"
               options={
