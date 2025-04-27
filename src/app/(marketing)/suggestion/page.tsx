@@ -303,12 +303,12 @@ export default function SuggestionPage() {
   return (
     <div className="flex w-full flex-col gap-10">
       <Header />
-      <div className="grid grid-cols-[65%_35%] gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[65%_35%]">
         <Banner
           title={bannerContent.title}
           description={bannerContent.description}
           buttonText={bannerContent.buttonText}
-          imageClassName="md:right-7"
+          imageClassName="md:right-7 right-0 w-[160px] md:w-[360px] top-58"
         />
         <CarouselVertical
           title={`Preporučeni klubovi`}

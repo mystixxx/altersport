@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface OnboardingHeaderProps {
   currentStep: number;
@@ -13,9 +14,10 @@ export default function OnboardingHeader({
 }: OnboardingHeaderProps) {
   // Create an array of steps for rendering
   const steps = Array.from({ length: totalSteps }, (_, i) => i);
+  const isMobile = useIsMobile();
 
   return (
-    <header className="flex w-full items-center justify-between px-6 py-4">
+    <header className="flex w-full flex-col justify-between gap-4 px-6 py-4 md:flex-row md:items-center md:gap-0">
       <div className="flex items-center">
         <Link href="/home">
           <Button variant="ghost" className="text-white">
@@ -34,12 +36,14 @@ export default function OnboardingHeader({
           />
         ))}
       </div>
-      <div className="invisible">
-        <Button variant="ghost" className="text-white">
-          <ArrowLeft className="size-4" />
-          Napusti Kviz
-        </Button>
-      </div>
+      {!isMobile && (
+        <div className="invisible">
+          <Button variant="ghost" className="text-white">
+            <ArrowLeft className="size-4" />
+            Napusti Kviz
+          </Button>
+        </div>
+      )}
     </header>
   );
 }
