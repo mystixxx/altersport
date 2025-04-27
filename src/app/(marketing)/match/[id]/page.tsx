@@ -108,7 +108,7 @@ export default function MatchPage() {
       <h1 className="pt-10 text-4xl font-bold text-white">
         Utakmica {league?.name}
       </h1>
-      <div className="grid grid-cols-[30%_70%] gap-6">
+      <div className="grid grid-cols-1 gap-6 md:grid-cols-[30%_70%]">
         {matchData && <MatchCardBig {...matchData} />}
         <Ranking clubIds={teamIds} leagueId={leagueId} />
       </div>
