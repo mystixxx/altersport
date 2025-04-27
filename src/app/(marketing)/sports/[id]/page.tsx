@@ -262,7 +262,7 @@ export default function Sports({
         items={isRecommendationsLoading ? skeletonMatchItems : matchItems}
         isLoading={isRecommendationsLoading}
       />
-      <div className="grid-cols2 grid gap-2 md:grid-cols-[35%_65%]">
+      <div className="grid grid-cols-1 gap-2 md:grid-cols-[35%_65%]">
         <CarouselVertical
           title={`Klubovi ${sportName ? `- ${sportName}` : ""}`}
           items={clubItems}

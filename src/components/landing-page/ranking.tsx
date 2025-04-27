@@ -16,7 +16,7 @@ export default function Ranking({ clubId, clubIds, leagueId }: RankingProps) {
 
   return (
     <div className="flex flex-col gap-6">
-      <h2 className="text-2xl font-semibold text-white">Rezultati</h2>
+      <h2 className="text-2xl font-semibold text-white">Poredak u ligi</h2>
       <RankingTable clubIds={allClubIds} leagueId={leagueId} />
     </div>
   );
