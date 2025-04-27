@@ -21,6 +21,8 @@ import {
 } from "@/components/ui/sidebar";
 import { Avatar, AvatarFallback } from "./ui/avatar";
 import { Separator } from "./ui/separator";
+import Link from "next/link";
+
 // This is sample data.
 const data = {
   versions: ["1.0.1", "1.1.0-alpha", "2.0.0-beta1"],
@@ -40,14 +42,9 @@ const data = {
           icon: <TrophyIcon size={24} />,
         },
         {
-          title: "Timovi",
-          url: "#",
+          title: "Utakmice",
+          url: "/games",
           icon: <ShieldHalfIcon size={24} />,
-        },
-        {
-          title: "Igrači",
-          url: "#",
-          icon: <UsersIcon size={24} />,
         },
       ],
     },
@@ -57,22 +54,10 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
-      <SidebarHeader>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton size="lg" asChild>
-              <a href="#">
-                <div className="bg-sidebar-primary text-sidebar-primary-foreground flex aspect-square size-8 items-center justify-center rounded-lg">
-                  <GalleryVerticalEnd className="size-4" />
-                </div>
-                <div className="flex flex-col gap-0.5 leading-none">
-                  <span className="font-medium">Documentation</span>
-                  <span className="">v1.0.0</span>
-                </div>
-              </a>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
+      <SidebarHeader className="px-4">
+        <Link href="/home">
+          <h1 className="mt-6 text-2xl font-bold text-white">ALTERSPORT</h1>
+        </Link>
       </SidebarHeader>
       <SidebarContent className="mt-5">
         {data.navMain.map((item) => (

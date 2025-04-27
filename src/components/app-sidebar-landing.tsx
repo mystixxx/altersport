@@ -219,20 +219,25 @@ export function AppSidebarLanding({
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
-        <div className="flex items-center justify-between gap-2 px-2 pb-5">
-          <div className="flex items-center gap-2">
-            <Avatar>
-              <AvatarFallback className="bg-[#401146] text-white">
-                IP
-              </AvatarFallback>
-            </Avatar>
-            <div className="text-text-whiteish">
-              <p className="text-sm font-semibold">Ilija Popović</p>
-              <p className="text-xs">ilija.popovic@gmail.com</p>
+        <Link href="/leagues">
+          <div className="flex items-center justify-between gap-2 px-2 pb-5">
+            <div className="flex items-center gap-2">
+              <Avatar>
+                <AvatarFallback className="bg-[#401146] text-white">
+                  IP
+                </AvatarFallback>
+              </Avatar>
+              <div className="text-text-whiteish">
+                <p className="text-sm font-semibold">Ilija Popović</p>
+                <p className="text-xs">ilija.popovic@gmail.com</p>
+              </div>
             </div>
+            <ChevronRightIcon
+              className="size-4 cursor-pointer"
+              color="#F8F5F9"
+            />
           </div>
-          <ChevronRightIcon className="size-4 cursor-pointer" color="#F8F5F9" />
-        </div>
+        </Link>
       </SidebarFooter>
     </Sidebar>
   );
