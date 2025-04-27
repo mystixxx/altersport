@@ -185,7 +185,7 @@ export default function HomePage() {
   return (
     <div className="flex w-full flex-col gap-10">
       <Header />
-      <Banner />
+      <Banner imageClassName="right-0 w-[160px] md:w-[360px] top-58" />
       <Carousel
         variant="match"
         title="Preporučeni događaji"

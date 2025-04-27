@@ -38,7 +38,7 @@ export default function Banner({
         width={420}
         height={360}
         priority
-        className={cn("absolute top-3 right-20", imageClassName)}
+        className={cn("absolute md:top-3 md:right-20", imageClassName)}
       />
     </div>
   );

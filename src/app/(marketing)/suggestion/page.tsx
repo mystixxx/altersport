@@ -308,7 +308,7 @@ export default function SuggestionPage() {
           title={bannerContent.title}
           description={bannerContent.description}
           buttonText={bannerContent.buttonText}
-          imageClassName="right-7"
+          imageClassName="md:right-7"
         />
         <CarouselVertical
           title={`Preporučeni klubovi`}
